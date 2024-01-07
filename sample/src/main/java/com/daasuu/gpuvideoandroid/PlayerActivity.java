@@ -26,7 +26,8 @@ import java.util.List;
 
 public class PlayerActivity extends AppCompatActivity {
 
-    private static final String STREAM_URL_MP4_VOD_LONG = "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4";
+//    private static final String STREAM_URL_MP4_VOD_LONG = "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4";
+    private static final String STREAM_URL_MP4_VOD_LONG = "http://18.136.144.240:8180/api/v1.0/video/16791164889833798-trimmed_video_2023_2_18_10_44_12.mp4";
 
     public static void startActivity(Activity activity) {
         Intent intent = new Intent(activity, PlayerActivity.class);

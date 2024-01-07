@@ -167,9 +167,9 @@ public class Mp4ComposeActivity extends AppCompatActivity {
         GPUMp4Composer = null;
         GPUMp4Composer = new GPUMp4Composer(videoItem.getPath(), videoPath)
                 // .rotation(Rotation.ROTATION_270)
-                //.size(720, 720)
-                .fillMode(FillMode.PRESERVE_ASPECT_CROP)
-                .filter(glFilter)
+//                .size(720, 720)
+//                .fillMode(FillMode.PRESERVE_ASPECT_CROP)
+                .filter(new GlFilterGroup())
                 .mute(muteCheckBox.isChecked())
                 .flipHorizontal(flipHorizontalCheckBox.isChecked())
                 .flipVertical(flipVerticalCheckBox.isChecked())

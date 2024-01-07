@@ -41,7 +41,7 @@ public class BaseCameraActivity extends AppCompatActivity {
     protected GPUCameraRecorder GPUCameraRecorder;
     private String filepath;
     private TextView recordBtn;
-    protected LensFacing lensFacing = LensFacing.BACK;
+    protected LensFacing lensFacing = LensFacing.FRONT;
     protected int cameraWidth = 1280;
     protected int cameraHeight = 720;
     protected int videoWidth = 720;
@@ -173,6 +173,7 @@ public class BaseCameraActivity extends AppCompatActivity {
                     @Override
                     public void onRecordComplete() {
                         exportMp4ToGallery(getApplicationContext(), filepath);
+                        Log.e("exportedFile----->", ""+filepath);
                     }
 
                     @Override
@@ -207,6 +208,10 @@ public class BaseCameraActivity extends AppCompatActivity {
                 .lensFacing(lensFacing)
                 .build();
 
+        Log.e("setUpCamera", "videoWidth------->"+videoWidth);
+        Log.e("setUpCamera", "videoHeight------->"+videoHeight);
+        Log.e("setUpCamera", "cameraWidth------->"+cameraWidth);
+        Log.e("setUpCamera", "cameraHeight------->"+cameraHeight);
 
     }
 

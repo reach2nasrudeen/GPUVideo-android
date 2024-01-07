@@ -289,6 +289,8 @@ public class GPUMp4Composer {
                 }
             } catch (RuntimeException e) {
                 Log.e(TAG, "Failed to release mediaMetadataRetriever.", e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
     }
@@ -313,7 +315,7 @@ public class GPUMp4Composer {
                 if (retriever != null) {
                     retriever.release();
                 }
-            } catch (RuntimeException e) {
+            } catch (RuntimeException | IOException e) {
                 Log.e(TAG, "Failed to release mediaMetadataRetriever.", e);
             }
         }
